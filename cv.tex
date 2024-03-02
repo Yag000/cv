@@ -1,0 +1,131 @@
+\documentclass[12pt]{article}
+\usepackage[english]{babel}
+\usepackage{cmbright}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage[sf]{libertine}
+\usepackage{microtype}
+\usepackage{paracol}
+\usepackage{supertabular}
+\usepackage{titlesec}
+\usepackage{amsmath}
+\usepackage{amssymb} 
+\usepackage{amsthm}  
+
+\hypersetup{colorlinks, urlcolor=black, linkcolor=black}
+
+% Geometry
+\geometry{hmargin=1.75cm, vmargin=2.5cm}
+\columnratio{0.65, 0.35}
+\setlength\columnsep{0.05\textwidth}
+\setlength\parindent{0pt}
+\setlength{\smallskipamount}{8pt plus 3pt minus 3pt}
+\setlength{\medskipamount}{16pt plus 6pt minus 6pt}
+\setlength{\bigskipamount}{24pt plus 8pt minus 8pt}
+
+% Style
+\pagestyle{empty}
+\titleformat{\section}{\scshape\LARGE\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{\bigskipamount}{\smallskipamount}
+\newcommand{\heading}[2]{\centering{\sffamily\Huge #1}\\\smallskip{\large{#2}}}
+\newcommand{\entry}[4]{{{\textbf{#1}}} \hfill #3 \\ #2 \hfill #4}
+\newcommand{\tableentry}[3]{\textsc{#1} & #2\expandafter\ifstrequal\expandafter{#3}{}{\\}{\\[6pt]}}
+
+\begin{document}
+
+\vspace*{\fill}
+
+\begin{paracol}{2}
+
+	% Name & headline
+	\heading{Yago Iglesias Vázquez}
+
+	\switchcolumn
+
+	% Identity card
+	\vspace{0.01\textheight}
+	\begin{supertabular}{ll}
+		\footnotesize\faPhone & +33 7 82 29 56 65 \\
+		\footnotesize\faEnvelope & \href{mailto:yago.iglesias.vazquez@gmail.com}{yago.iglesias.vazquez@gmail.com} \\
+		\footnotesize\faGithub & \href{https://github.com/Yag000}{github.com/Yag000} \\
+	\end{supertabular}
+
+	\bigskip
+	\switchcolumn*
+
+	\section{Formation}
+
+	\entry{Université Paris Cité}{Double licence Mathématiques Informatique}{Paris, France}{2021 -- présent}
+	\medskip
+
+	\switchcolumn
+
+	\section{Habilidades}
+	\begin{supertabular}{rl}
+		\tableentry{\footnotesize\faCode}{Rust \textperiodcentered{} Ocaml \textperiodcentered{} C }{}
+		\tableentry{}{Python \textperiodcentered{} Java \textperiodcentered{} Bash}{}
+		\tableentry{}{}{}
+
+		\tableentry{\footnotesize\faLanguage}{Espagnol \textperiodcentered{} Langue maternelle}{}
+		\tableentry{}{Français \textperiodcentered{} Avancée}{}
+		\tableentry{}{Anglais \textperiodcentered{} Avancée}{}
+	\end{supertabular}
+
+	\switchcolumn*
+
+	\section{Expérience}
+
+	\entry{CiTIUS}{Stage de recherche: Caractérisation d'objets avec LiDAR}{ }{julliet 2023}
+	\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+		\item L'objectif était de développer des algorithmes pour mesurer avec précision des objets avec un seul balayage LiDAR grâce à la réflexion de l'objet sur un miroir bien placé.
+	\end{itemize}
+
+
+
+	\medskip
+	\switchcolumn
+
+	\section{Autres intêtets}
+
+
+	\textbf{Journées Franciliennes de Programmation}\\
+	\noindent Participation en 2022 et 2023
+
+	\textbf{SWERC}\\
+	\noindent Participation en 2024
+	\bigskip
+
+	%TODO: Add lambda
+
+\end{paracol}
+
+\section{Projets de programmation}
+
+\begin{paracol}{2}
+	\entry{\href{https://github.com/Yag000/chimpanzee}{Chimpanzee}}{Interpréteur, compilateur et formateur de Monkey en Rust}{ }{ }
+	\medskip
+	\switchcolumn
+
+	\entry{\href{https://github.com/Yag000/jsh-tyy}{jst-tyy}}{Job control shell en C développé pour le cours de Systèmes d'exploitation}{ }{ }
+	\medskip
+	\switchcolumn
+
+	\entry{\href{https://moule.informatique.univ-paris-diderot.fr/iglesias/U3bbU3c0}{$\pmb\lambda\pi$}}{Implémentation des types dépendants en OCaml}{ }{ }
+	\medskip
+	\switchcolumn
+
+
+
+
+
+
+\end{paracol}
+
+
+
+\vspace*{\fill}
+
+\end{document}
