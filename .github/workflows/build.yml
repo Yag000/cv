@@ -11,9 +11,13 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: cv-french.tex
+          root_file: |
+          cv-french.tex
+          cv-english.tex
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
         with:
           name: PDF
-          path: cv-french.tex
+          path: |
+          cv-french.tex
+          cv-english.tex

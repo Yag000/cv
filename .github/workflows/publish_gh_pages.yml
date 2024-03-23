@@ -16,3 +16,4 @@ jobs:
           pre_compile_command:
           files: |
            cv-french.tex
+           cv-english.tex

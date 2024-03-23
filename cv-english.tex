@@ -1,0 +1,143 @@
+\documentclass[12pt]{article}
+\usepackage[english]{babel}
+\usepackage{cmbright}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage[sf]{libertine}
+\usepackage{microtype}
+\usepackage{paracol}
+\usepackage{supertabular}
+\usepackage{titlesec}
+\usepackage{amsmath}
+\usepackage{amssymb} 
+\usepackage{amsthm}  
+
+\hypersetup{colorlinks, urlcolor=black, linkcolor=black}
+
+% Geometry
+\geometry{hmargin=1.75cm, vmargin=2.5cm}
+\columnratio{0.65, 0.35}
+\setlength\columnsep{0.05\textwidth}
+\setlength\parindent{0pt}
+\setlength{\smallskipamount}{8pt plus 3pt minus 3pt}
+\setlength{\medskipamount}{16pt plus 6pt minus 6pt}
+\setlength{\bigskipamount}{24pt plus 8pt minus 8pt}
+
+% Style
+\pagestyle{empty}
+\titleformat{\section}{\scshape\LARGE\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{\bigskipamount}{\smallskipamount}
+\newcommand{\heading}[2]{\centering{\sffamily\Huge #1}\\\smallskip{\large{#2}}}
+\newcommand{\entry}[4]{{{\textbf{#1}}} \hfill #3 \\ #2 \hfill #4}
+\newcommand{\tableentry}[3]{\textsc{#1} & #2\expandafter\ifstrequal\expandafter{#3}{}{\\}{\\[6pt]}}
+
+\begin{document}
+
+\vspace*{\fill}
+
+\begin{paracol}{2}
+
+	% Name & headline
+	\heading{Yago Iglesias Vázquez}
+
+	Student in Mathematics and Computer Science
+
+	\switchcolumn
+
+	% Identity card
+	\vspace{0.01\textheight}
+	\begin{supertabular}{ll}
+		\footnotesize\faEnvelope & \href{mailto:yago.iglesias.vazquez@gmail.com}{yago.iglesias.vazquez@gmail.com} \\
+		\footnotesize\faGithub & \href{https://github.com/Yag000}{github.com/Yag000} \\
+	\end{supertabular}
+
+	\medskip
+	\switchcolumn*
+
+	\section{Education}
+	\entry{Paris Cité University}{\small Double degree in Mathematics and Computer Science}{Paris, France}{2021 -- present}
+	\medskip
+
+	\entry{Spanish Lycee Luis Buñuel}{Highest Honors with Jury's Congratulations}{Neuilly-sur-Seine, France}{2018 -- 2021}
+	\medskip
+
+    \normalsize
+
+
+	\switchcolumn
+
+	\section{Skills}
+	\begin{supertabular}{rl}
+		\tableentry{\footnotesize\faCode}{Rust \textperiodcentered{} Ocaml \textperiodcentered{} C \textperiodcentered{} Coq }{}
+		\tableentry{}{Python \textperiodcentered{} Java   \textperiodcentered{} Bash}{}
+		\tableentry{}{}{}
+
+		\tableentry{\footnotesize\faLanguage}{Spanish \textperiodcentered{} Native language}{}
+		\tableentry{}{French \textperiodcentered{} Advanced}{}
+		\tableentry{}{English \textperiodcentered{} Advanced}{}
+	\end{supertabular}
+
+	\switchcolumn*
+
+	\section{Experience}
+
+	\entry{CiTIUS}{Research Internship}{Santiago de Compostela, Spain}{July 2023}
+	\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+		\item Development of algorithms to precisely characterize objects with a single LiDAR scan by reflecting the object on a well-placed mirror.
+	\end{itemize}
+
+
+	\switchcolumn
+
+	\section{Competitions}
+
+
+	\textbf{Francilien Programming Days}\\
+	\noindent Participation in 2022 and 2023
+
+	\textbf{SWERC}\\
+	\noindent Participation in 2024
+
+	%TODO: Add lambda
+
+\end{paracol}
+
+\section{Interests}
+
+
+\begin{paracol}{2}
+
+	\entry{Computer Science}{Type theory, programming languages, proof assistants, operating systems}{ }{ }
+
+	\switchcolumn
+
+
+	\entry{Mathematics}{Logic, Galois theory}{ }{ }
+\end{paracol}
+
+
+\columnratio{0.60, 0.40}
+
+\section{Programming Projects}
+
+\begin{paracol}{2}
+	\entry{\href{https://github.com/Yag000/jsh-tyy}{jsh-tyy}}{C Job Shell as part of an operating systems course}{ }{ }
+	\medskip
+	\switchcolumn
+
+	\entry{\href{https://moule.informatique.univ-paris-diderot.fr/iglesias/U3bbU3c0}{$\pmb\lambda\pi$}}{Dependent types implementation in OCaml}{ }{ }
+	\medskip
+	\switchcolumn
+
+	\entry{\href{https://github.com/Yag000/chimpanzee}{Chimpanzee}}{Monkey interpreter, compiler, and formatter written in Rust}{ }{ }
+	\switchcolumn
+
+	\entry{\href{https://github.com/GabinDDL/L2S2-GYTMY-Game}{Be Amazed}}{Voice recognition game in Java}{ }{ }
+\end{paracol}
+
+
+\end{document}
+
