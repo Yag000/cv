@@ -1,9 +1,3 @@
-# CV
-
-## English
-
-English cv is available [here](https://yag000.github.io/cv/cv-english.pdf).
-
-## French
-
-French cv is available [here](https://yag000.github.io/cv/cv-french.pdf).
+You can find my CV in this repository. It is available in two languages: 
+[English](https://yag000.github.io/cv/cv-english.pdf) and [French](https://yag000.github.io/cv/cv-french.pdf).
+The source code is written in LaTeX and the PDF files are uploaded to a web page automatically using GitHub Actions.
