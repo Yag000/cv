@@ -13,7 +13,7 @@
 \usepackage{titlesec}
 \usepackage{amsmath}
 \usepackage{amssymb} 
-\usepackage{amsthm}  
+\usepackage{amsthm}
 
 \hypersetup{colorlinks, urlcolor=black, linkcolor=black}
 
@@ -145,4 +145,11 @@
 	\switchcolumn
 \end{paracol}
 
+\nocite{*} 
+\renewcommand{\refname}{Research} % This replaces the "References" section title by "Research"
+\bibliographystyle{plain}
+\bibliography{papers.bib}
+
+
 \end{document}
+
