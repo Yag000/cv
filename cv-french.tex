@@ -56,7 +56,10 @@
 	\switchcolumn*
 
 	\section{Formation}
-	\entry{Université Paris Cité}{Double licence en Mathématiques et Informatique}{Paris, France}{2021 -- présent}
+	\entry{Université Paris Cité}{\small Master de recherche en informatique théorique (MPRI)}{Paris, France}{2024 -- présent}
+	\medskip
+
+	\entry{Université paris cité}{Double licence en Mathématiques et Informatique}{Paris, France}{2021 -- 2024}
 	\medskip
 
 	\entry{Lycée Espagnol Luis Buñuel}{Mention Très Bien avec Félicitations du Jury}{Neuilly-sur-Seine, France}{2018 -- 2021}
@@ -67,7 +70,7 @@
 
 	\section{Compétences}
 	\begin{supertabular}{rl}
-		\tableentry{\footnotesize\faCode}{Rust \textperiodcentered{} Ocaml \textperiodcentered{} C \textperiodcentered{} Coq }{}
+		\tableentry{\footnotesize\faCode}{Rust \textperiodcentered{} Ocaml \textperiodcentered{}  Rocq \textperiodcentered{} C}{}
 		\tableentry{}{Python \textperiodcentered{} Java   \textperiodcentered{} Bash}{}
 		\tableentry{}{}{}
 
@@ -86,6 +89,14 @@
 	\end{itemize}
 
 
+
+	\entry{IRIF}{Stage de recherche}{Paris, France}{juin - juillet 2024}
+	\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+        \item Développement d'algorithmes de simplification de formules intuitionnistes vérifiés en Rocq dans le cadre de l'interpolation
+            uniforme dans le projet de recherche \href{https://github.com/hferee/UIML}{UIML}\cite{feree:hal-04859429}.
+	\end{itemize}
+
+
 	\switchcolumn
 
 	\section{Concours}
@@ -101,20 +112,23 @@
 
 \end{paracol}
 
+
 \section{Centres d'intérêt}
 
 
 \begin{paracol}{2}
 
-	\entry{Informatique}{Théorie des types, langages de programmation, assistants de preuve, systèmes d'exploitation}{ }{ }
+	\entry{Informatique}{Théorie des types, assistants de preuve, théorie des automates,
+        langages de programmation}{ }{ }
 
 	\switchcolumn
 
 
-	\entry{Mathématiques}{Logique, théorie de Galois}{ }{ }
+	\entry{Mathématiques}{Logique, théorie de la démonstration, théorie de Galois}{ }{ }
 \end{paracol}
 
 
+\newpage %Just for now
 \columnratio{0.60, 0.40}
 
 \section{Projets de programmation}
@@ -128,11 +142,26 @@
 	\medskip
 	\switchcolumn
 
+
+	\entry{\href{https://github.com/Yag000/enum_stringify}{enum\_stringify}}{Ensemble de macros Rust pour générer des fonctions de conversion de chaînes pour les énumérations}{ }{ }
+	\bigskip
+	\switchcolumn
+
+	\entry{\href{https://github.com/Yag000/cinta}{cinta}}{Un framework de test C simple}{ }{ }
+	\bigskip
+	\bigskip
+	\switchcolumn
+
 	\entry{\href{https://github.com/Yag000/chimpanzee}{Chimpanzee}}{Interpréteur, compilateur et formateur de Monkey en écrit en Rust}{ }{ }
 	\switchcolumn
 
 	\entry{\href{https://github.com/GabinDDL/L2S2-GYTMY-Game}{Be Amazed}}{Jeu avec reconnaissance vocale en Java}{ }{ }
+
 \end{paracol}
 
+\nocite{*} 
+\renewcommand{\refname}{Recherche} % This replaces the "References" section title by "Research"
+\bibliographystyle{plain}
+\bibliography{papers.bib}
 
 \end{document}
