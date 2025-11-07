@@ -7,13 +7,46 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@main
-      - name: Compile and Deploy
-        uses: jonhue/pubtex-action@main
+        with:
+          submodules: 'true'
+      - uses: xu-cheng/latex-action@v3
+        with:
+          root_file: |
+            cv-french.tex
+            cv-english.tex
+
+      # From here it is copied from : https://github.com/jonhue/pubtex-action
+      # with a few modifications
+      - name: Move PDFs
+        run: mv ./*.pdf dist
+        shell: bash
+      - name: Move index page
+        run: cp README.md dist/index.md
+        shell: bash
+      - uses: actions/upload-artifact@master
+        with:
+          name: pdfs-deploy
+          path: dist
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@master
+
+      - uses: actions/download-artifact@master
+        with:
+          name: pdfs-deploy
+          path: dist
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3.8.0
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          pre_compile_command:
-          files: |
-           cv-french.tex
-           cv-english.tex
+          publish_dir: dist
+          allow_empty_commit: true
+          force_orphan: true
+          enable_jekyll: true
