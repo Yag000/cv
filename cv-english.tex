@@ -15,7 +15,23 @@
 \usepackage{amssymb} 
 \usepackage{amsthm}
 
-\hypersetup{colorlinks, urlcolor=black, linkcolor=black}
+\usepackage{color}
+\usepackage{xcolor}
+
+\definecolor{red}{rgb}{1,0,0}
+\definecolor{green}{rgb}{0,1,0}
+\definecolor{darkgreen}{rgb}{0,0.5,0}
+\definecolor{blue}{rgb}{0,0,1}
+\definecolor{violet}{rgb}{0.4,0,0.8}
+
+
+\hypersetup{
+	colorlinks,
+	linkcolor={},
+	citecolor={blue!80!black},
+	urlcolor={blue!50!black}
+}
+
 
 % Geometry
 \geometry{hmargin=1.75cm, vmargin=2.5cm}
@@ -59,13 +75,13 @@
 	\switchcolumn*
 
 	\section{Education}
-	\entry{Paris Cité University}{\hspace{-6.5cm} \small Master's degree in Theoretical \\ Computer Science research (MPRI)}{Paris, France}{2024 -- present}
+    \entry{Université Paris Cité}{\hspace{-6.5cm} \small {Master's degree in Theoretical \\ Computer Science research (MPRI)}}{Paris, France}{2024 -- present}
 	\medskip
 
-	\entry{Paris Cité University}{\small Double degree in Mathematics and Computer Science}{Paris, France}{2021 -- 2024}
+	\entry{Université Paris Cité}{\small Double degree in Mathematics and Computer Science}{Paris, France}{2021 -- 2024}
 	\medskip
 
-	\entry{Spanish Lycee Luis Buñuel}{Highest Honors with Jury's Congratulations}{Neuilly-sur-Seine, France}{2018 -- 2021}
+	\entry{Lycée Espagnol Luis Buñuel}{Highest Honors with Jury's Congratulations}{Neuilly-sur-Seine, France}{2018 -- 2021}
 	\medskip
 
 	\switchcolumn
@@ -73,7 +89,7 @@
 	\section{Skills}
 	\begin{supertabular}{rl}
 		\tableentry{\footnotesize\faCode}{Rust \textperiodcentered{} Ocaml \textperiodcentered{} Rocq \textperiodcentered{} C}{}
-		\tableentry{}{Python \textperiodcentered{} Java \textperiodcentered{} Bash}{}
+		\tableentry{}{Python \textperiodcentered{} Java \textperiodcentered{} Bash \textperiodcentered{} Prolog}{}
 		\tableentry{}{}{}
 
 		\tableentry{\footnotesize\faLanguage}{Spanish \textperiodcentered{} Native language}{}
@@ -85,14 +101,22 @@
 
 	\section{Experience}
 
-	\entry{CiTIUS}{Research Internship}{Santiago de Compostela, Spain}{July 2023}
+	\entry{IRIF}{Research Internship}{Paris, France}{February - June 2025}
 	\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
-		\item Development of algorithms to precisely characterize objects with a single LiDAR scan by reflecting the object on a well-placed mirror.
+		\item Solved the uniformisation problem for MSO for finite binary trees with Thomas Colcombet, you can read the report \href{https://yag000.github.io/tree-uniformisation/main-uniformisation.pdf}{here}.
+		      The project was in the context of a "research course" for my master's degree.
 	\end{itemize}
 
 	\entry{IRIF}{Research Internship}{Paris, France}{June - July 2024}
 	\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
-		\item Development of Coq verified simplification of intuitionistic formulas in the context of uniform interpolation in the research project \href{https://github.com/hferee/UIML}{UIML}\cite{feree:hal-04859429}.
+		\item Development of Coq verified simplification of intuitionistic formulas in the context of uniform interpolation in the research project \href{https://github.com/hferee/UIML}{UIML}\cite{feree:hal-04859429}
+		      with Sam van Gool and Hugo Férée.
+	\end{itemize}
+
+
+	\entry{CiTIUS}{Research Internship}{Santiago de Compostela, Spain}{July 2023}
+	\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
+		\item Development of algorithms to precisely characterize objects with a single LiDAR scan by reflecting the object on a well-placed mirror.
 	\end{itemize}
 
 	\switchcolumn
@@ -105,22 +129,22 @@
 	\textbf{SWERC}\\
 	\noindent Participation in 2024
 
+	\section{Interests}
+
+	\begin{paracol}{2}
+		\entry{
+\center
+        Computer Science}{Type theory, proof assistants, automata theory, compilation and functional programming languages}{ }{ }
+
+		\entry{Mathematics}{Logic, proof theory, model theory}{ }{ }
+	\end{paracol}
+
 \end{paracol}
 
-\section{Interests}
-
-\begin{paracol}{2}
-
-	\entry{Computer Science}{Type theory, proof assistants,automata theory,  programming languages}{ }{ }
-
-	\switchcolumn
-
-	\entry{Mathematics}{Logic, proof theory, model theory}{ }{ }
-\end{paracol}
 
 \newpage
 
-\section{Programming Projects}
+\section{Some Programming Projects}
 
 \begin{paracol}{2}
 	\entry{\href{https://github.com/Yag000/chimpanzee}{Chimpanzee}}{Monkey interpreter, compiler, and formatter written in Rust}{ }{ }
@@ -135,7 +159,7 @@
 	\medskip
 	\switchcolumn
 
-	\entry{\href{https://moule.informatique.univ-paris-diderot.fr/iglesias/U3bbU3c0}{$\pmb\lambda\pi$}}{Dependent types implementation in OCaml}{ }{ }
+	\entry{\href{https://moule.informatique.univ-paris-diderot.fr/iglesias/U3bbU3c0}{$\pmb\lambda\pi$}}{Dependent types implementation in OCaml, with Amélia Coutard and Pierre-Évariste Dagand}{ }{ }
 	\medskip
 	\switchcolumn
 
