@@ -1,7 +1,8 @@
 \documentclass[12pt]{article}
-\usepackage[english]{babel}
+\usepackage[french]{babel}
 \usepackage{cmbright}
 \usepackage{enumitem}
+\usepackage{mdwlist}
 \usepackage{fancyhdr}
 \usepackage{fontawesome5}
 \usepackage{geometry}
@@ -12,8 +13,10 @@
 \usepackage{supertabular}
 \usepackage{titlesec}
 \usepackage{amsmath}
-\usepackage{amssymb} 
-\usepackage{amsthm}  
+\usepackage{ragged2e}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
 
 \hypersetup{colorlinks, urlcolor=black, linkcolor=black}
 
@@ -41,14 +44,14 @@
 \begin{paracol}{2}
 
 	% Name & headline
-	\heading{Yago Iglesias Vázquez} {Étudiant en informatique théorique}
+	\heading{Yago Iglesias Vázquez} {Étudiant en M2 recherche}
 
 	\switchcolumn
 
 	% Identity card
 	\vspace{0.01\textheight}
 	\begin{supertabular}{ll}
-		\footnotesize\faEnvelope & \href{mailto:me@yagoiglesias.fr}{me@yagoiglesias.fr} \\
+		\footnotesize\faEnvelope & \href{mailto:me@yagoiglesias.fr}{yago.iglesias-vazquez@inria.fr} \\
 		\footnotesize\faGithub & \href{https://github.com/Yag000}{github.com/Yag000} \\
 	\end{supertabular}
 
@@ -56,77 +59,89 @@
 	\switchcolumn*
 
 	\section{Formation}
-	\entry{Université Paris Cité}{\small Master de recherche en informatique théorique (MPRI)}{Paris, France}{2024 -- présent}
+	\entry{Université Paris Cité}{\small Master Parisien de Recherche en Informatique (MPRI)}{Paris, France}{2024 -- présent}
+	\begin{itemize}
+		\justifying
+		\item Cours suivis en M2:
+		      \href{https://mpri-master.ens.fr/doku.php?id=cours:mata}{MATA},
+		      \href{https://mpri-master.ens.fr/doku.php?id=cours:fun}{FUN},
+		      \href{https://mpri-master.ens.fr/doku.php?id=cours:prfa}{PRFA},
+		      \href{https://mpri-master.ens.fr/doku.php?id=cours:prfsys}{PRFSYS},
+		      \href{https://mpri-master.ens.fr/doku.php?id=cours:progproofs}{PROGPROOFS},
+		      \href{https://mpri-master.ens.fr/doku.php?id=cours:qd}{QD},
+		      \href{https://mpri-master.ens.fr/doku.php?id=cours:ecolo}{ECOLO},
+		      \href{https://master.math.u-paris.fr/modules/m2lmfi-cat/}{théorie des catégories}  et
+		      \href{https://master.math.u-paris.fr/modules/masterphilo-histoirelogique/}{philosophie des mathématiques}
+		\item Mention Très Bien en M1 (18.23)
+	\end{itemize}
+
+	\entry{Université Paris Cité}{Double licence en Mathématiques et Informatique} {Paris, France}{2021 -- 2024}
+	\begin{itemize}
+		\item{Mathématique : Mention Très Bien (17.597,1/35) }
+		\item{Informatique : Mention Très Bien (18.316, 2/34) }
+	\end{itemize}
 	\medskip
 
-	\entry{Université paris cité}{Double licence en Mathématiques et Informatique}{Paris, France}{2021 -- 2024}
-	\medskip
+	\entry{Lycée Espagnol Luis Buñuel}{Mention Très Bien avec Félicitations du Jury (19.78)}{Neuilly-sur-Seine, France}{2018 -- 2021}
 
-	\entry{Lycée Espagnol Luis Buñuel}{Mention Très Bien avec Félicitations du Jury}{Neuilly-sur-Seine, France}{2018 -- 2021}
-	\medskip
+	\section{Expérience}
 
+	\entry{LMF}{Stage de recherche}{Gif-sur-Yvette, France}{avril - août 2026}
+	\begin{itemize*}
+		\justifying
+		\item [] Vérification formelle en Rocq d’algorithmes élémentaires \\ d’arithmétique flottante triple-mots avec analyse de précision.
+	\end{itemize*}
+
+	\entry{IRIF}{Stage de recherche}{Paris, France}{février - juin 2025}
+	\begin{itemize*}
+		\justifying
+		\item [] Résolution du problème d'uniformisation MSO pour des arbres binaires non-ordonnés avec Thomas Colcombet. Le rapport
+		est disponible \href{https://yag000.github.io/tree-uniformisation/main-uniformisation.pdf}{ici}. Le projet s'inscrit dans un
+		cour de recherche du master MPRI.
+	\end{itemize*}
+
+	\entry{IRIF}{Stage de recherche}{Paris, France}{juin - juillet 2024}
+	\begin{itemize*}
+		\justifying
+		\item [] Développement d'algorithmes de simplification de formules intuitionnistes vérifiés en Rocq dans le cadre de l'interpolation
+		uniforme dans le projet de recherche \href{https://github.com/hferee/UIML}{UIML}\cite{feree:hal-04859429}.
+	\end{itemize*}
+
+	\entry{CiTIUS}{Stage de recherche}{Saint-Jacques-de-Compostelle, Espagne}{juillet 2023}
+	\begin{itemize*}
+		\justifying
+		\item [] Développement d'algorithmes pour caractériser précisément des objets avec un seul balayage LiDAR grâce à la réflexion de l'objet sur un miroir bien placé.
+	\end{itemize*}
 
 	\switchcolumn
 
 	\section{Compétences}
 	\begin{supertabular}{rl}
-		\tableentry{\footnotesize\faCode}{Rust \textperiodcentered{} Ocaml \textperiodcentered{}  Rocq \textperiodcentered{} C}{}
-		\tableentry{}{Python \textperiodcentered{} Java   \textperiodcentered{} Bash}{}
+		\tableentry{\footnotesize\faCode}{Rocq \textperiodcentered{} Ocaml \textperiodcentered{} Rust  \textperiodcentered{} C \textperiodcentered{} Why3}{}
+		\tableentry{}{ Python \textperiodcentered{} Java \textperiodcentered{} Bash \textperiodcentered{} Prolog}{}
 		\tableentry{}{}{}
 
+
 		\tableentry{\footnotesize\faLanguage}{Espagnol \textperiodcentered{} Langue maternelle}{}
-		\tableentry{}{Français \textperiodcentered{} Avancé}{}
+		\tableentry{}{Français \textperiodcentered{} Maitrisé}{}
 		\tableentry{}{Anglais \textperiodcentered{} Avancé}{}
 	\end{supertabular}
 
-	\switchcolumn*
-
-	\section{Expérience}
-
-	\entry{CiTIUS}{Stage de recherche}{Saint-Jacques-de-Compostelle, Espagne}{juillet 2023}
-	\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
-		\item Développement d'algorithmes pour caractériser précisément des objets avec un seul balayage LiDAR grâce à la réflexion de l'objet sur un miroir bien placé.
-	\end{itemize}
-
-
-
-	\entry{IRIF}{Stage de recherche}{Paris, France}{juin - juillet 2024}
-	\begin{itemize}[noitemsep,leftmargin=3.5mm,rightmargin=0mm,topsep=6pt]
-        \item Développement d'algorithmes de simplification de formules intuitionnistes vérifiés en Rocq dans le cadre de l'interpolation
-            uniforme dans le projet de recherche \href{https://github.com/hferee/UIML}{UIML}\cite{feree:hal-04859429}.
-	\end{itemize}
-
-
-	\switchcolumn
 
 	\section{Concours}
 
-
 	\textbf{Journées Franciliennes de Programmation}\\
-	\noindent Participation en 2022 et 2023
+	\noindent Participation en 2022, 2023 et 2024.
 
 	\textbf{SWERC}\\
-	\noindent Participation en 2024
+	\noindent Participation en 2024.
 
-	%TODO: Add lambda
+	\section{Centres d'intérêt}
+	\justifying
+
+	Assistants de preuve, théorie des types, arithmétique flottante, logique, automates, compilation et langages fonctionnels.
 
 \end{paracol}
-
-
-\section{Centres d'intérêt}
-
-
-\begin{paracol}{2}
-
-	\entry{Informatique}{Théorie des types, assistants de preuve, théorie des automates,
-        langages de programmation}{ }{ }
-
-	\switchcolumn
-
-
-	\entry{Mathématiques}{Logique, théorie de la démonstration, théorie de Galois}{ }{ }
-\end{paracol}
-
 
 \newpage %Just for now
 \columnratio{0.60, 0.40}
@@ -141,7 +156,6 @@
 	\entry{\href{https://moule.informatique.univ-paris-diderot.fr/iglesias/U3bbU3c0}{$\pmb\lambda\pi$}}{Implémentation des types dépendants en OCaml}{ }{ }
 	\medskip
 	\switchcolumn
-
 
 	\entry{\href{https://github.com/Yag000/enum_stringify}{enum\_stringify}}{Ensemble de macros Rust pour générer des fonctions de conversion de chaînes pour les énumérations}{ }{ }
 	\bigskip
@@ -159,7 +173,7 @@
 
 \end{paracol}
 
-\nocite{*} 
+\nocite{*}
 \renewcommand{\refname}{Publications} % This replaces the "References" section title by "Research"
 \bibliographystyle{plain}
 \bibliography{papers.bib}
